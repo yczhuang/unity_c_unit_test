@@ -55,7 +55,8 @@ SYMBOLS=
 
 all: clean default
 
-default: $(SRC_FILES1) $(SRC_FILES2)
+default: $(SRC_FILES1)
+	$(MKDIR) $(TARGET_OUTPUT_DIR)
 	$(C_COMPILER) $(CFLAGS) $(INC_DIRS) $(SYMBOLS) $(SRC_FILES1) -o $(TARGET1)
 	- $(TARGET1)
 
